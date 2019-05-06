@@ -1,0 +1,80 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<div class="form-row">
+	<div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['firstName']['show']">
+		<label>
+    First Name:
+    <input type="text" formControlName="firstName" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf="employee['lastName']['show']">
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf="employee['street']['show']">
+     <label>
+      Street:
+      <input type="text" formControlName="street" >
+    </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf="employee['city']['show']">
+    <label>
+      City:
+      <input type="text" formControlName="city" >
+    </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf="employee['state']['show']">
+    <label>
+      State:
+      <input type="text" formControlName="state" >
+    </label>
+</div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf="employee['zip']['show']">
+    <label>
+      Zip Code:
+      <input type="text" formControlName="zip" >
+    </label>
+    </div>
+
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['workDept']['show']">
+		<label>
+    Work Department:
+    <input type="text" formControlName="workDept" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['salary']['show']">
+		<label>
+    Salary:
+    <input type="text" formControlName="salary" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['bonus']['show']">
+		<label>
+    Bonus:
+    <input type="text" formControlName="bonus" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['mobile']['show']">
+		<label>
+    Mobile Number:
+    <input type="text" formControlName="mobile" >
+  </label>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6" *ngIf=" employee['employeeNum']['show']">
+		<label>
+    Employee Number:
+    <input type="text" formControlName="employeeNum" >
+  </label>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6">
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </div>
+    <div class="form-group col-12 col-sm-6 col-lg-6 col-md-6 col-xs-6">
+  <input type="button" (click)="updateProfile()" value="Edit" name="edit" />
+    </div>
+  
+</div>
+</form>
